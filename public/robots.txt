@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://grosse-plankermann.com/sitemap-index.xml
