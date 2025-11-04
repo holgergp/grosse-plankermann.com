@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700&display=swap');
+
+@theme {
+  --font-sans: 'Albert Sans', system-ui, -apple-system, sans-serif;
+
+  /* Purple accent color */
+  --color-accent: #8B5CF6;
+  --color-accent-hover: #7C3AED;
+
+  /* Light mode colors */
+  --color-background: #FAFAFA;
+  --color-foreground: #1A1A1A;
+  --color-secondary: #666666;
+
+  /* Dark mode colors */
+  --color-dark-background: #0A0A0A;
+  --color-dark-foreground: #FAFAFA;
+  --color-dark-secondary: #999999;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground transition-colors duration-300;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-dark-background);
+    color: var(--color-dark-foreground);
+  }
+}
+
+/* Custom utility classes */
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-secondary {
+    color: var(--color-dark-secondary);
+  }
+}
+
+.bg-background {
+  background-color: var(--color-background);
+}
+
+@media (prefers-color-scheme: dark) {
+  .bg-background {
+    background-color: var(--color-dark-background);
+  }
+}
+
+.text-foreground {
+  color: var(--color-foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-foreground {
+    color: var(--color-dark-foreground);
+  }
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.hover-accent:hover {
+  color: var(--color-accent-hover);
+}

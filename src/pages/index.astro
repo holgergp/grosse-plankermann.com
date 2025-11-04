@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Holger Grosse-Plankermann - Software Engineer & Nerd';
+const description = 'Software Engineer & Nerd. I like Hipster-Stuff such as Specialty Coffee, Craft-Beer and records with crushing guitars.';
+---
+
+<Layout title={title} description={description}>
+  <main class="w-full tracking-wide mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+    <Header />
+    <SocialLinks />
+    <Footer />
+  </main>
+</Layout>
