@@ -4,13 +4,15 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="mt-16 md:mt-20 lg:mt-24 pt-8 border-t border-secondary/20">
-  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-    <p class="text-sm text-secondary">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-4">
+    <p class="text-sm md:text-sm text-secondary text-center md:text-left">
       &copy; {currentYear} Holger Grosse-Plankermann. All rights reserved.
     </p>
-    <div class="flex gap-4 text-sm text-secondary">
-      <a href="/impressum" class="text-accent hover:underline">Imprint/Impressum</a>
-      <a href="/datenschutz" class="text-accent hover:underline">Privacy/Datenschutz</a>
+    <div class="flex flex-col md:flex-row gap-3 md:gap-4 text-sm md:text-sm text-secondary items-center">
+      <div class="flex gap-3 md:gap-4">
+        <a href="/impressum" class="text-accent hover:underline">Imprint/Impressum</a>
+        <a href="/datenschutz" class="text-accent hover:underline">Privacy/Datenschutz</a>
+      </div>
       <p class="flex items-center gap-1">
         Built with
         <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
