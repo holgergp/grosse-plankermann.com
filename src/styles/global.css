@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Geist', system-ui, -apple-system, sans-serif;
+  --font-sans: "Geist", system-ui, -apple-system, sans-serif;
 
   /* Purple accent color */
-  --color-accent: #8B5CF6;
-  --color-accent-hover: #7C3AED;
+  --color-accent: #8b5cf6;
+  --color-accent-hover: #7c3aed;
 
   /* Light mode colors */
-  --color-background: #FAFAFA;
-  --color-foreground: #1A1A1A;
+  --color-background: #fafafa;
+  --color-foreground: #1a1a1a;
   --color-secondary: #666666;
 
   /* Dark mode colors */
-  --color-dark-background: #0A0A0A;
-  --color-dark-foreground: #FAFAFA;
+  --color-dark-background: #0a0a0a;
+  --color-dark-foreground: #fafafa;
   --color-dark-secondary: #999999;
 }
 
