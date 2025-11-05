@@ -1,43 +1,73 @@
-# Astro Starter Kit: Minimal
+# grosse-plankermann.com
 
-```sh
-npm create astro@latest -- --template minimal
+Personal portfolio website for Holger Grosse-Plankermann - Software Engineer & Nerd.
+
+A single-page static site showcasing personal information, projects, and social media presence.
+
+## Tech Stack
+
+- **Framework**: [Astro 5.x](https://astro.build) - Static site generation with zero client-side JavaScript
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com) - Utility-first CSS framework
+- **Font**: [Geist](https://vercel.com/font) - Modern sans-serif typeface family
+- **TypeScript**: Strict mode for type safety
+- **Node**: v20
+
+## Features
+
+- Fully static HTML generation (no client-side JavaScript)
+- Responsive design with mobile-first approach
+- Automatic dark mode support using `prefers-color-scheme`
+- Comprehensive SEO with Open Graph and Twitter Card meta tags
+- JSON-LD structured data (Person schema)
+- Sitemap generation
+- Optimized for Core Web Vitals
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server at localhost:4321
+npm run dev
+
+# Build production site to ./dist/
+npm run build
+
+# Preview production build locally
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Deployment
 
-## 🚀 Project Structure
+The site is hosted on [Netlify](https://www.netlify.com) with continuous deployment from the main branch.
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Build command**: `npm run build`
+- **Publish directory**: `dist`
+- **Node version**: 20
+- **Domain**: [grosse-plankermann.com](https://grosse-plankermann.com)
 
-```text
+Deployment configuration is managed in `netlify.toml`. Push to the main branch triggers an automatic build and deployment.
+
+## Project Structure
+
+```
 /
-├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── pages/
+│   │   └── index.astro          # Homepage
+│   ├── components/
+│   │   ├── Header.astro          # Main content section
+│   │   ├── SocialLinks.astro     # Social media links
+│   │   └── Footer.astro          # Copyright footer
+│   ├── layouts/
+│   │   └── Layout.astro          # Base HTML layout with SEO
+│   └── styles/
+│       └── global.css            # Tailwind config and theme
+├── public/                       # Static assets
+└── astro.config.mjs              # Astro configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Migration Context
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This site was migrated from WordPress to Astro for better performance, lower maintenance overhead, and modern development experience. See `specs/astro-migration-plan.md` for details.
