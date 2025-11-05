@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Impressum - Holger Grosse-Plankermann"
+  description="Legal information and contact details"
+>
+  <main class="max-w-3xl mx-auto px-6 py-12 md:px-8 md:py-16">
+    <h1 class="text-4xl md:text-5xl font-bold mb-8">Impressum</h1>
+
+    <div class="space-y-6 text-base md:text-lg">
+      <section>
+        <h2 class="text-xl font-semibold mb-2">Angaben gemäß § 5 TMG</h2>
+        <p>
+          Holger Grosse-Plankermann<br />
+          Keplerstr. 11<br />
+          40215 Düsseldorf
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2">Kontakt</h2>
+        <p>
+          E-Mail: mail<span class="select-none">&lt;at&gt;</span>grosse-plankermann.com
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>
+          Holger Grosse-Plankermann<br />
+          Keplerstr. 11<br />
+          40215 Düsseldorf
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
