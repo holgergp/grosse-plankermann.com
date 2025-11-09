@@ -40,14 +40,25 @@ npm run preview
 
 ## Deployment
 
-The site is hosted on [Netlify](https://www.netlify.com) with continuous deployment from the main branch.
+### Production Hosting
 
+The site is hosted on [statichost.eu](https://statichost.eu) (European hosting) with automatic deployment via GitHub webhook.
+
+- **Hosting**: statichost.eu (Variable Object Assignment, Stockholm, Sweden)
+- **URL**: https://holgergp-homepage.statichost.page/
+- **Domain**: [grosse-plankermann.com](https://grosse-plankermann.com)
 - **Build command**: `npm run build`
 - **Publish directory**: `dist`
 - **Node version**: 20
-- **Domain**: [grosse-plankermann.com](https://grosse-plankermann.com)
+- **Deployment**: Push to main branch triggers GitHub webhook to statichost.eu for automatic build and deployment
 
-Deployment configuration is managed in `netlify.toml`. Push to the main branch triggers an automatic build and deployment.
+### Preview Deployments
+
+[Netlify](https://www.netlify.com) is used for automatic preview deployments on pull requests.
+
+- Preview URLs are automatically generated for each PR
+- Netlify configuration is maintained in `netlify.toml`
+- Not used for production hosting
 
 ## Project Structure
 
@@ -55,7 +66,9 @@ Deployment configuration is managed in `netlify.toml`. Push to the main branch t
 /
 ├── src/
 │   ├── pages/
-│   │   └── index.astro          # Homepage
+│   │   ├── index.astro          # Homepage
+│   │   ├── impressum.astro      # Legal imprint (German requirement)
+│   │   └── datenschutz.astro    # Privacy policy (GDPR)
 │   ├── components/
 │   │   ├── Header.astro          # Main content section
 │   │   ├── SocialLinks.astro     # Social media links
