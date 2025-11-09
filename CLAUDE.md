@@ -17,10 +17,15 @@ npm run astro        # Run Astro CLI commands
 ```
 
 ### Deployment
-- **Hosting**: Netlify with continuous deployment from GitHub
-- **Build command**: `npm run build` (configured in netlify.toml)
+- **Production Hosting**: statichost.eu (European hosting)
+  - URL: https://holgergp-homepage.statichost.page/
+  - Domain: grosse-plankermann.com (points to statichost.eu)
+  - Automatic deployment via GitHub webhook on push/merge to main
+- **Preview/PR Deployments**: Netlify (for GitHub PR previews only)
+  - Automatic builds for pull requests
+  - Not used for production
+- **Build command**: `npm run build`
 - **Publish directory**: `dist`
-- **Domain**: grosse-plankermann.com
 
 ## Architecture
 
@@ -36,7 +41,9 @@ npm run astro        # Run Astro CLI commands
 /
 ├── src/
 │   ├── pages/
-│   │   └── index.astro          # Homepage (single page site)
+│   │   ├── index.astro          # Homepage
+│   │   ├── impressum.astro      # Legal imprint (German requirement)
+│   │   └── datenschutz.astro    # Privacy policy (GDPR)
 │   ├── components/
 │   │   ├── Header.astro          # Name, bio, and project links
 │   │   ├── SocialLinks.astro     # Social media icons
@@ -164,7 +171,12 @@ This site was migrated from WordPress (Bjork theme) to modern Astro stack. See `
 - To change colors: Update theme variables in global.css
 
 ### Deployment
-- Push to main branch triggers automatic Netlify build
-- Build status visible in Netlify dashboard
-- DNS managed via Netlify nameservers
-- SSL certificate auto-renews via Let's Encrypt
+- **Production**: Push to main branch triggers GitHub webhook to statichost.eu
+  - Automatic build and deployment via statichost.eu
+  - Domain grosse-plankermann.com points to https://holgergp-homepage.statichost.page/
+  - SSL certificate managed by statichost.eu
+  - Hosting in Europe
+- **PR Previews**: Netlify used for automatic preview deployments
+  - Push to PR branches triggers automatic Netlify preview builds
+  - Preview URLs available in GitHub PR comments
+  - Netlify not used for production
