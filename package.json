@@ -12,9 +12,9 @@
   "dependencies": {
     "@astrojs/sitemap": "3.6.0",
     "@fontsource-variable/geist": "5.2.8",
-    "@tailwindcss/vite": "4.1.16",
-    "astro": "5.15.6",
-    "tailwindcss": "4.1.16"
+    "@tailwindcss/vite": "4.1.17",
+    "astro": "5.15.7",
+    "tailwindcss": "4.1.17"
   },
   "devDependencies": {
     "husky": "9.1.7",
