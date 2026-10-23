@@ -32,9 +32,9 @@ The `netlify.toml` file is ready with:
   to = "/index.html"
   status = 200
 
-[build.environment]
-  NODE_VERSION = "20"
 ```
+
+The Node version is read from `.nvmrc`.
 
 ## Deployment to Netlify
 
@@ -201,7 +201,7 @@ Once connected to GitHub, Netlify will:
 **Build fails on Netlify:**
 - Check build logs in Netlify dashboard
 - Ensure all dependencies are in package.json
-- Verify Node version matches (v20)
+- Verify Node version matches `.nvmrc` (v24)
 
 **DNS not propagating:**
 - Check with: `dig grosse-plankermann.com`

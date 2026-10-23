@@ -10,7 +10,7 @@ A single-page static site showcasing personal information, projects, and social 
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com) - Utility-first CSS framework
 - **Font**: [Geist](https://vercel.com/font) - Modern sans-serif typeface family
 - **TypeScript**: Strict mode for type safety
-- **Node**: v20
+- **Node**: v24 (see `.nvmrc`)
 
 ## Features
 
@@ -49,7 +49,7 @@ The site is hosted on [statichost.eu](https://statichost.eu) (European hosting) 
 - **Domain**: [grosse-plankermann.com](https://grosse-plankermann.com)
 - **Build command**: `npm run build`
 - **Publish directory**: `dist`
-- **Node version**: 20
+- **Node version**: 24 (from `.nvmrc`)
 - **Deployment**: Push to main branch triggers GitHub webhook to statichost.eu for automatic build and deployment
 
 ### Preview Deployments

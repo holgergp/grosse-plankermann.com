@@ -34,7 +34,7 @@ npm run astro        # Run Astro CLI commands
 - **Styling**: Tailwind CSS v4 (using @tailwindcss/vite plugin)
 - **Font**: Geist (Google Fonts)
 - **TypeScript**: Strict mode enabled
-- **Node Version**: 20 (specified in netlify.toml)
+- **Node Version**: 24 (specified in `.nvmrc`, used by CI and Netlify)
 
 ### Project Structure
 ```
@@ -164,6 +164,11 @@ This site was migrated from WordPress (Bjork theme) to modern Astro stack. See `
 - Custom theme variables defined in global.css @theme block
 - Dark mode handled automatically via prefers-color-scheme
 - Maintain consistent spacing scale using Tailwind defaults
+
+### Dependencies
+- Always pin exact versions in package.json: `"astro": "5.18.2"`, never `^5.18.2` or `~5.18.2`
+- `.npmrc` sets `save-exact=true`, so `npm install <pkg>` saves an exact version (add `--save-dev` for dev dependencies)
+- Commit package.json and package-lock.json together
 
 ### Adding Content
 - To update bio/description: Edit Header.astro and Layout.astro
