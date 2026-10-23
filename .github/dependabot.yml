@@ -23,4 +23,17 @@ updates:
     # Commit message prefix
     commit-message:
       prefix: "chore(deps)"
-      include: "scope"
+
+  # Keep GitHub Actions (pinned to commit SHAs) up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "ci"
