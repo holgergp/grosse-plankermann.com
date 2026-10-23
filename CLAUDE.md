@@ -34,7 +34,7 @@ npm run astro        # Run Astro CLI commands
 - **Styling**: Tailwind CSS v4 (using @tailwindcss/vite plugin)
 - **Font**: Geist (Google Fonts)
 - **TypeScript**: Strict mode enabled
-- **Node Version**: 20 (specified in netlify.toml)
+- **Node Version**: 24 (specified in `.nvmrc`, used by CI and Netlify)
 
 ### Project Structure
 ```
