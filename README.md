@@ -6,7 +6,7 @@ A single-page static site showcasing personal information, projects, and social 
 
 ## Tech Stack
 
-- **Framework**: [Astro 5.x](https://astro.build) - Static site generation with zero client-side JavaScript
+- **Framework**: [Astro 7.x](https://astro.build) - Static site generation with zero client-side JavaScript
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com) - Utility-first CSS framework
 - **Font**: [Geist](https://vercel.com/font) - Modern sans-serif typeface family
 - **TypeScript**: Strict mode for type safety
