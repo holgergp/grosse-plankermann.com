@@ -30,7 +30,7 @@ npm run astro        # Run Astro CLI commands
 ## Architecture
 
 ### Tech Stack
-- **Framework**: Astro 5.x (static site generation)
+- **Framework**: Astro 7.x (static site generation)
 - **Styling**: Tailwind CSS v4 (using @tailwindcss/vite plugin)
 - **Font**: Geist (Google Fonts)
 - **TypeScript**: Strict mode enabled
