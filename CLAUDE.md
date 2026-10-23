@@ -16,6 +16,19 @@ npm run preview      # Preview production build locally
 npm run astro        # Run Astro CLI commands
 ```
 
+### Testing
+```bash
+npm run test:e2e                     # Playwright tests (screenshot comparisons skipped locally)
+npm run test:e2e:container           # Run them in the CI container, including screenshots (podman or docker)
+npm run test:e2e:update-screenshots  # Regenerate screenshot baselines in the CI container
+```
+
+- `tests/pages.spec.ts`: `toHaveScreenshot()` of the homepage at 1280/768/390px and the legal pages at 1280/390px, each in light and dark; baselines in `tests/screenshots/`, copyright year masked
+- `tests/links.spec.ts`: footer links navigate to imprint/privacy, project and social links have the right targets
+- Baselines must be rendered in the `mcr.microsoft.com/playwright` image CI uses (local browsers differ by a few pixels), so `ignoreSnapshots` skips comparisons outside CI
+- After an intended visual change, run `npm run test:e2e:update-screenshots` or the **Update Screenshots** workflow on the PR branch; it commits the baselines and re-triggers CI via `workflow_dispatch`
+- Tests run against `astro preview` on `127.0.0.1:4330`, so a dev server on 4321 doesn't interfere. Astro 7 backgrounds `astro preview` when it detects an AI agent, which makes Playwright's webServer exit early; agents run tests with `env -u AI_AGENT -u CLAUDECODE npm run test:e2e`
+
 ### Deployment
 - **Production Hosting**: statichost.eu (European hosting)
   - URL: https://holgergp-homepage.statichost.page/
