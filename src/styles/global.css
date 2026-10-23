@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Geist", system-ui, -apple-system, sans-serif;
+  --font-sans: "Geist Variable", "Geist", system-ui, -apple-system, sans-serif;
 
   /* Purple accent color */
   --color-accent: #8b5cf6;
