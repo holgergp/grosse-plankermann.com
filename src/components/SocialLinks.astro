@@ -36,17 +36,15 @@ const socialLinks = [
 
 <section class="mt-12 md:mt-16 lg:mt-20">
   <div class="flex gap-4 items-center">
-    {
-      socialLinks.map((link) => (
-        <a
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="w-6 h-6 text-[#6366f1] hover:text-[#818cf8] transition-colors"
-          aria-label={`Visit my ${link.name} profile`}
-          set:html={link.svg}
-        />
-      ))
-    }
+    {socialLinks.map((link) => (
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-6 h-6 text-[#6366f1] hover:text-[#818cf8] transition-colors"
+        aria-label={`Visit my ${link.name} profile`}
+        set:html={link.svg}
+      />
+    ))}
   </div>
 </section>
